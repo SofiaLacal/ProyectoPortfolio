@@ -2551,6 +2551,16 @@ input, select, textarea {
 			cursor: default;
 		}
 
+		.button-contact {
+			display:none; 
+			padding:15px; 
+			background-color:#49bf9d; 
+			color:white; 
+			border-radius:5px; 
+			margin-top:15px; 
+			text-align:center;
+		}
+
 /* Work Item */
 
 	.work-item {
@@ -2570,6 +2580,15 @@ input, select, textarea {
 			font-size: 0.8em;
 			line-height: 1.5em;
 			margin: 0;
+		}
+	
+		#two .work-item .image.fit.thumb {
+    	cursor: default;
+		}
+
+		#two .work-item .image.fit.thumb:before,
+		#two .work-item .image.fit.thumb:after {
+			display: none !important;
 		}
 
 /* Header */

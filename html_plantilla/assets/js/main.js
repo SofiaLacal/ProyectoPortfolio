@@ -93,25 +93,50 @@
 
 			}
 
-	// Main Sections: Two.
-
-		// Lightbox gallery.
-			$window.on('load', function() {
-
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
+	// Manejo del formulario de contacto
+	$window.on('load', function() {
+		console.log('Página cargada completamente');
+		
+		// Buscar el formulario específicamente en la sección three
+		var $formulario = $('#three form');
+		console.log('Formulario encontrado:', $formulario.length > 0);
+		
+		if ($formulario.length > 0) {
+			$formulario.on('submit', function(e) {
+				e.preventDefault();
+				console.log('Formulario enviado');
+				
+				var nombre = $('#name').val().trim();
+				var email = $('#email').val().trim();
+				var mensaje = $('#message').val().trim();
+				
+				console.log('Nombre:', nombre);
+				console.log('Email:', email);
+				console.log('Mensaje:', mensaje);
+				
+				if(nombre !== '' && email !== '' && mensaje !== '') {
+					console.log('Todos los campos llenos');
+					
+					// Mostrar mensaje de confirmación
+					$('#mensaje-confirmacion').fadeIn(400);
+					
+					// Limpiar formulario
+					$formulario[0].reset();
+					
+					// Ocultar mensaje después de 5 segundos
+					setTimeout(function() {
+						$('#mensaje-confirmacion').fadeOut(400);
+					}, 5000);
+					
+				} else {
+					console.log('Faltan campos');
+					alert('Por favor, completa todos los campos del formulario.');
+				}
 			});
+
+		} else {
+			console.log('ERROR: No se encontró el formulario');
+		}
+	});
 
 })(jQuery);
