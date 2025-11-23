@@ -1,21 +1,21 @@
-
 const express = require("express");
 const exphbs = require("express-handlebars");
 
 const app = express();
+app.use(express.static("."));
 
-app.listen(3000);
+// 🔥 IMPORTANTE: Los archivos estáticos deben ir ANTES de las rutas
+app.use(express.static("html_plantilla"));
 
+// Configurar Handlebars
 app.engine("handlebars", exphbs.engine());
-
 app.set("view engine", "handlebars");
 
-//Indico que si voy a home, me cargue home
+// Rutas
 app.get("/", (req, res) => {
     res.render("index");
 })
 
-//Rutas para portfolios
 app.get("/portfolioJavier", (req, res) => {
     res.render("javierportfolio", { layout: "portfolio" });
 })
@@ -32,4 +32,7 @@ app.get("/portfolioSofia", (req, res) => {
     res.render("sofiaportfolio", { layout: "portfolio" });
 })
 
-app.use(express.static("html_plantilla", { layout: "portfolio" }));
+// El listen al final
+app.listen(3000, () => {
+    console.log("Servidor corriendo en http://localhost:3000");
+});
