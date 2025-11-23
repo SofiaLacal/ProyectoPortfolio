@@ -16,8 +16,20 @@ app.get("/", (req, res) => {
 })
 
 //Rutas para portfolios
-/* app.get("/portfolios", (req, res) => {
-    res.render("mainportfolio");
-})  */
+app.get("/portfolioJavier", (req, res) => {
+    res.render("javierportfolio");
+})
+
+app.get("/portfolioPablo", (req, res) => {
+    res.render("pabloportfolio");
+})
+
+app.get("/portfolioLaura", (req, res) => {
+    res.render("lauraportfolio");
+})
+
+app.get("/portfolioSofia", (req, res) => {
+    res.render("sofiaportfolio");
+})
 
 app.use(express.static("html_plantilla"));
