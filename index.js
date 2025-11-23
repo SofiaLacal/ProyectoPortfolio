@@ -17,19 +17,19 @@ app.get("/", (req, res) => {
 
 //Rutas para portfolios
 app.get("/portfolioJavier", (req, res) => {
-    res.render("javierportfolio");
+    res.render("javierportfolio", { layout: "portfolio" });
 })
 
 app.get("/portfolioPablo", (req, res) => {
-    res.render("pabloportfolio");
+    res.render("pabloportfolio", { layout: "portfolio" });
 })
 
 app.get("/portfolioLaura", (req, res) => {
-    res.render("lauraportfolio");
+    res.render("lauraportfolio", { layout: "portfolio" });
 })
 
 app.get("/portfolioSofia", (req, res) => {
-    res.render("sofiaportfolio");
+    res.render("sofiaportfolio", { layout: "portfolio" });
 })
 
-app.use(express.static("html_plantilla"));
+app.use(express.static("html_plantilla", { layout: "portfolio" }));
