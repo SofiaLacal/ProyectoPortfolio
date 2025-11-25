@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 #titular{
   width: 40%;
@@ -9,10 +10,18 @@
   box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
  
 }
-h1{
+ #laura{
   margin: 2%;
    color: rgb(0, 0, 0,0.4);
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   font-family: 'Orbitron', sans-serif;
+   color: black;
+   text-shadow: 2px 2px 2px green;
+  
+}
+h2{
+  color: black;
+   text-shadow: 2px 2px 2px green;
 }
 #java{
   width: 10%;
@@ -21,4 +30,37 @@ float: right;
 }
 .icono{
   width: 3%;
+}
+
+
+
+
+.contenedor{
+  width: 20%;
+  padding: 100px;
+  margin-top: 200px;
+  float: right;
+  padding: 2px;
+     font-family: 'Orbitron', sans-serif;
+    
+     
+}
+#foto{
+ position: absolute;
+  right: 20px; 
+  top: 250px;
+  width: 300px;
+  z-index: 10;
+  border-radius: 200px;
+}
+.tarjeta-derecha{
+  border: 2px solid gray;
+  margin: 2px;
+background-color: rgba(200, 200, 200, 0.5);
+  color: black;
+  box-shadow: 1px 2px 2px green;
+  width: 200%;
+  border-radius: 20px;
+  text-align: center;
+  
 }
