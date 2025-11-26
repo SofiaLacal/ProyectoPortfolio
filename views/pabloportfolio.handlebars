@@ -17,3 +17,79 @@
 					</div>
   </div>
 </header>
+
+<!-- Main -->
+<div id="main">
+  <!-- Perfil -->
+  <section id="perfil">
+    <header class="major">
+      <h2>{{miembro.nombre}} {{miembro.apellidos}}</h2>
+    </header>
+    <p>{{miembro.descripcion}}</p>
+    {{#if miembro.linkedin}}
+      <ul class="actions">
+        <li><a href="{{miembro.linkedin}}" target="_blank" class="button icon brands fa-linkedin">LinkedIn</a></li>
+        {{#if miembro.github}}
+          <li><a href="{{miembro.github}}" target="_blank" class="button icon brands fa-github">GitHub</a></li>
+        {{/if}}
+      </ul>
+    {{else if miembro.github}}
+      <ul class="actions">
+        <li><a href="{{miembro.github}}" target="_blank" class="button icon brands fa-github">GitHub</a></li>
+      </ul>
+    {{/if}}
+  </section>
+
+  <!-- Idiomas -->
+  <section id="idiomas">
+    <h2>Idiomas</h2>
+    <ul>
+      {{#each idiomas}}
+        <li>{{idioma}} - {{nivel}}</li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <!-- Tecnologías -->
+  <section id="tecnologias">
+    <h2>Tecnologías</h2>
+    <ul>
+      {{#each tecnologias}}
+        <li>{{nombre}} ({{nivel}})</li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <ul>
+      {{#each proyectos}}
+        <li>
+          <strong>{{nombreProyecto}}</strong>: {{descripcion}}
+          {{#if linkRepo}} - <a href="{{linkRepo}}" target="_blank">Repo</a>{{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    <ul class="icons">
+      <li><a href="https://x.com/?lang=es" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="https://github.com/" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+      <li><a href="https://www.linkedin.com/home" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkdeIn</span></a></li>
+      <li><a href="/" class="icon solid fa-home"><span class="label">Home</span></a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.poptrox.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
