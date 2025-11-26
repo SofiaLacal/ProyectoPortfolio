@@ -9,7 +9,6 @@ router.get('/portfolioPablo', async (req, res) => {
       const [tecnologias] = await db.query('SELECT * FROM tecnologias WHERE equipo_id = 2 ORDER BY orden');
       const [proyectos] = await db.query('SELECT * FROM proyectos WHERE equipo_id = 2 ORDER BY orden');
   
-      // Validar que existe el miembro
       if (!miembro || miembro.length === 0) {
         return res.status(404).send('No se encontró el miembro del equipo con id 2');
       }
