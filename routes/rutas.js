@@ -14,7 +14,6 @@ router.get('/portfolioPablo', async (req, res) => {
       }
   
       res.render('pabloportfolio', {
-        layout: 'portfolio',
         miembro: miembro[0],
         idiomas: idiomas || [],
         tecnologias: tecnologias || [],
@@ -39,7 +38,6 @@ router.get('/portfolioSofia', async (req, res) => {
       }
   
       res.render('sofiaportfolio', {
-        layout: 'portfolio',
         miembro: miembro[0],
         idiomas: idiomas || [],
         tecnologias: tecnologias || [],
@@ -64,7 +62,6 @@ router.get('/portfolioJavier', async (req, res) => {
       }
   
       res.render('javierportfolio', {
-        layout: 'portfolio',
         miembro: miembro[0],
         idiomas: idiomas || [],
         tecnologias: tecnologias || [],
@@ -89,7 +86,6 @@ router.get('/portfolioLaura', async (req, res) => {
       }
   
       res.render('lauraportfolio', {
-        layout: 'portfolio',
         miembro: miembro[0],
         idiomas: idiomas || [],
         tecnologias: tecnologias || [],

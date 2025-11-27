@@ -73,4 +73,6 @@ VALUES ('GitKraken', 'Intermedio', 'DevOps', 12, 3);
 INSERT INTO tecnologias (nombre, nivel, categoria, orden, equipo_id)
 VALUES ('Bootstrap', 'Intermedio', 'Frontend', 13, 3);
 
+INSERT INTO tecnologias (nombre, nivel, categoria, orden, equipo_id)
+VALUES ('WordPress', 'Intermedio', 'FullStack', 14, 3);
 

@@ -98,7 +98,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #928e8e;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -122,7 +122,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #787878;
+		color: #3e3e3e;
 		font-weight: 400;
 	}
 
@@ -135,14 +135,13 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color: #858282;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			color: inherit;
 			text-decoration: none;
 		}
 
@@ -2464,8 +2463,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #45c8cd;
+			color: #45c8cd !important;
 		}
 
 		input[type="submit"]:active,
@@ -2473,8 +2472,8 @@ input, select, textarea {
 		input[type="button"]:active,
 		.button:active {
 			background-color: rgba(73, 191, 157, 0.1);
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #45c8cd;
+			color: #45c8cd !important;
 		}
 
 		input[type="submit"].icon,
@@ -2517,8 +2516,8 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #49bf9d;
-			border-color: #49bf9d;
+			background-color: #45c8cd;
+			border-color: #45c8cd;
 			color: #ffffff !important;
 		}
 
@@ -2526,16 +2525,16 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #5cc6a7;
-				border-color: #5cc6a7;
+				background-color: #45c8cd;
+				border-color: #45c8cd;
 			}
 
 			input[type="submit"].primary:active,
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			.button.primary:active {
-				background-color: #3eb08f;
-				border-color: #3eb08f;
+				background-color: #45c8cd;
+				border-color: #45c8cd;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2554,7 +2553,7 @@ input, select, textarea {
 		.button-contact {
 			display:none; 
 			padding:15px; 
-			background-color:#49bf9d; 
+			background-color:#45c8cd; 
 			color:white; 
 			border-radius:5px; 
 			margin-top:15px; 
@@ -3243,6 +3242,28 @@ input, select, textarea {
 			}
 	}
 
+
+/* -------------------- OTROS ESTILOS ---------------------*/
+#tecnologias {
+  padding: 20px;
+}
+
+.tecnologias-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.tecnologias-lista li {
+  background: #eaeaea;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+
 /* ------------- ESTILOS PARA PERFIL SOFIA ---------------- */
 	.perfil-sofia {
 		display: flex; 
@@ -3256,6 +3277,10 @@ input, select, textarea {
 		height: 300px;
 		border-radius: 10px;
 		flex-shrink: 0;
+	}
+
+	.color-texto-sofia {
+		color: rgb(151, 68, 224) !important;
 	}
 
 	/* Responsive para móviles */
@@ -3272,3 +3297,74 @@ input, select, textarea {
 				height: 100px;
 		}
 	}
+
+
+/* ------------- ESTILOS PARA PERFIL JAVIER ---------------- */
+	.perfil-javier {
+		display: flex; 
+		align-items: center;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.perfil-javier img {
+		width: 250px;
+		height: 300px;
+		border-radius: 10px;
+		flex-shrink: 0;
+	}
+
+	.color-texto-javier {
+		color: rgb(49, 168, 87) !important;
+	}
+
+	/* Responsive para móviles */
+	@media screen and (max-width: 736px) {
+		.perfil-javier {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 1rem;
+		}
+		
+		.perfil-javier img {
+				width: 90px;
+				height: 100px;
+		}
+	}
+
+	/* ------------- ESTILOS PARA PERFIL PABLO ---------------- */
+	.perfil-pablo {
+		display: flex; 
+		align-items: center;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.perfil-pablo img {
+		width: 250px;
+		height: 300px;
+		border-radius: 10px;
+		flex-shrink: 0;
+	}
+
+	.color-texto-pablo {
+		color: rgb(42, 50, 201) !important;
+	}
+
+	/* Responsive para móviles */
+	@media screen and (max-width: 736px) {
+		.perfil-pablo {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 1rem;
+		}
+		
+		.perfil-pablo img {
+				width: 90px;
+				height: 100px;
+		}
+	}
+
+	/* ------------- ESTILOS PARA PERFIL LAURA ---------------- */

@@ -25,7 +25,7 @@
       <img src="/assets/css/images/sofia.jpg" class="image avatar nosotros" alt="Sofia" />
       <div class="perfil-content">
         <header class="major">
-          <h2>{{miembro.nombre}} {{miembro.apellidos}}</h2>
+          <h2 class="color-texto-sofia">{{miembro.nombre}} {{miembro.apellidos}}</h2>
         </header>
         <p>{{miembro.descripcion}}</p>
         {{#if miembro.linkedin}}
@@ -45,7 +45,7 @@
 
   <!-- Idiomas -->
   <section id="idiomas">
-    <h2>Idiomas</h2>
+    <h2 class="color-texto-sofia">Idiomas</h2>
     <ul>
       {{#each idiomas}}
         <li>{{idioma}} - {{nivel}}</li>
@@ -55,8 +55,8 @@
 
   <!-- Tecnologías -->
   <section id="tecnologias">
-    <h2>Tecnologías</h2>
-    <ul>
+    <h2 class="color-texto-sofia">Tecnologías</h2>
+    <ul class="tecnologias-lista">
       {{#each tecnologias}}
         <li>{{nombre}} ({{nivel}})</li>
       {{/each}}
@@ -65,7 +65,7 @@
 
   <!-- Proyectos -->
   <section id="proyectos">
-    <h2>Proyectos</h2>
+    <h2 class="color-texto-sofia">Proyectos Personales</h2>
     <ul>
       {{#each proyectos}}
         <li>
