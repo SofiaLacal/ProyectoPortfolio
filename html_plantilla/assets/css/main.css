@@ -2664,10 +2664,8 @@ input, select, textarea {
 
 		#header .image.nosotros {
 			width: 5.4em;
+			user-select: none;
 		}
-
-	
-		
 
 /* Footer */
 
@@ -3243,5 +3241,34 @@ input, select, textarea {
 				margin-left: 0;
 				padding-left: 0;
 			}
+	}
 
+/* ------------- ESTILOS PARA PERFIL SOFIA ---------------- */
+	.perfil-sofia {
+		display: flex; 
+		align-items: center;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.perfil-sofia img {
+		width: 250px;
+		height: 300px;
+		border-radius: 10px;
+		flex-shrink: 0;
+	}
+
+	/* Responsive para móviles */
+	@media screen and (max-width: 736px) {
+		.perfil-sofia {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 1rem;
+		}
+		
+		.perfil-sofia img {
+				width: 90px;
+				height: 100px;
+		}
 	}

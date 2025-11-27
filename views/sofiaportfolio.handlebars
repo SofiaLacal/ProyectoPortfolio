@@ -13,7 +13,6 @@
         <a href="/portfolioLaura" class="image avatar nosotros"><img src="/assets/css/images/laura.jpg" alt="Laura" /></a>
         <a href="/portfolioPablo" class="image avatar nosotros"><img src="/assets/css/images/pablo.jpg" alt="Pablo" /></a>
         <a href="/portfolioJavier" class="image avatar nosotros"><img src="/assets/css/images/javi.jpg" alt="Javier" /></a>
-        <a href="/portfolioSofia" class="image avatar nosotros"><img src="/assets/css/images/sofia.jpg" alt="Sofia" /></a>
       </div>
   </div>
 </header>
@@ -21,23 +20,27 @@
 <!-- Main -->
 <div id="main">
   <!-- Perfil -->
-  <section id="perfil">
-    <header class="major">
-      <h2>{{miembro.nombre}} {{miembro.apellidos}}</h2>
-    </header>
-    <p>{{miembro.descripcion}}</p>
-    {{#if miembro.linkedin}}
-      <ul class="actions">
-        <li><a href="{{miembro.linkedin}}" target="_blank" class="button icon brands fa-linkedin">LinkedIn</a></li>
-        {{#if miembro.github}}
-          <li><a href="{{miembro.github}}" target="_blank" class="button icon brands fa-github">GitHub</a></li>
+  <section>
+    <div class="perfil-sofia">
+      <img src="/assets/css/images/sofia.jpg" class="image avatar nosotros" alt="Sofia" />
+      <div class="perfil-content">
+        <header class="major">
+          <h2>{{miembro.nombre}} {{miembro.apellidos}}</h2>
+        </header>
+        <p>{{miembro.descripcion}}</p>
+        {{#if miembro.linkedin}}
+          <ul class="actions">
+            <li><a href="{{miembro.linkedin}}" target="_blank" class="button icon brands fa-linkedin">LinkedIn</a></li>
+            {{#if miembro.github}}
+              <li><a href="{{miembro.github}}" target="_blank" class="button icon brands fa-github">GitHub</a></li>
+            {{/if}}
+          </ul>
+        {{else if miembro.github}}
+          <ul class="actions">
+            <li><a href="{{miembro.github}}" target="_blank" class="button icon brands fa-github">GitHub</a></li>
+          </ul>
         {{/if}}
-      </ul>
-    {{else if miembro.github}}
-      <ul class="actions">
-        <li><a href="{{miembro.github}}" target="_blank" class="button icon brands fa-github">GitHub</a></li>
-      </ul>
-    {{/if}}
+    </div>
   </section>
 
   <!-- Idiomas -->
@@ -69,6 +72,7 @@
           <strong>{{nombreProyecto}}</strong>: {{descripcion}}
           {{#if linkRepo}} - <a href="{{linkRepo}}" target="_blank">Repo</a>{{/if}}
         </li>
+        <br>
       {{/each}}
     </ul>
   </section>
