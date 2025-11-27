@@ -1,6 +1,5 @@
 <!-- Header -->
 <header id="header">
-  <link rel="stylesheet" href="/assets/css/laura.css">
   <div class="inner">
       <a href="/" class="image avatar"><img src="/assets/css/images/panda-logo.jpg" alt="Logo PandaPixel Studio" /></a>
       <h1><strong>PandaPixel Studio</strong><br/>
@@ -12,43 +11,89 @@
     Conoce algo más sobre nosotros</h1><br/>
 					<div>
 						<a href="/portfolioPablo" class="image avatar nosotros"><img src="/assets/css/images/pablo.jpg" alt="Pablo" /></a>
-						<a href="/portfolioJavier" class="image avatar nosotros"><img src="/assets/css/images/javi.jpg" alt="Javier" /></a>
+            <a href="/portfolioJavier" class="image avatar nosotros"><img src="/assets/css/images/javi.jpg" alt="Javier" /></a>
 						<a href="/portfolioSofia" class="image avatar nosotros"><img src="/assets/css/images/sofia.jpg" alt="Sofia" /></a>
 					</div>
   </div>
-
 </header>
 
+<!-- Main -->
+<div id="main">
+  <!-- Perfil -->
+  <section>
+    <div class="perfil-laura">
+      <img src="/assets/css/images/laura.jpg" class="image avatar nosotros" alt="Laura"/>
+      <div class="perfil-content">
+      <header class="major">
+        <h2 class="color-texto-laura">{{miembro.nombre}} {{miembro.apellidos}}</h2>
+      </header>
+      <p>{{miembro.descripcion}}</p>
+      {{#if miembro.linkedin}}
+        <ul class="actions">
+          <li><a href="{{miembro.linkedin}}" target="_blank" class="button icon brands fa-linkedin">LinkedIn</a></li>
+          {{#if miembro.github}}
+            <li><a href="{{miembro.github}}" target="_blank" class="button icon brands fa-github">GitHub</a></li>
+          {{/if}}
+        </ul>
+      {{else if miembro.github}}
+        <ul class="actions">
+          <li><a href="{{miembro.github}}" target="_blank" class="button icon brands fa-github">GitHub</a></li>
+        </ul>
+      {{/if}}
+    </div>
+  </section>
 
-<div id="titular">
-  <h1 id="laura">Desarrolladora Backend</h1>
+  <!-- Idiomas -->
+  <section id="idiomas">
+    <h2 class="color-texto-laura">Idiomas</h2>
+    <ul>
+      {{#each idiomas}}
+        <li>{{idioma}} - {{nivel}}</li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <!-- Tecnologías -->
+  <section id="tecnologias">
+    <h2 class="color-texto-laura">Tecnologías</h2>
+    <ul class="tecnologias-lista">
+      {{#each tecnologias}}
+        <li>{{nombre}} ({{nivel}})</li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <h2 class="color-texto-laura">Proyectos Personales</h2>
+    <ul>
+      {{#each proyectos}}
+        <li>
+          <strong>{{nombreProyecto}}</strong>: {{descripcion}}
+          {{#if linkRepo}} - <a href="{{linkRepo}}" target="_blank">Repo</a>{{/if}}
+        </li>
+        <br>
+      {{/each}}
+    </ul>
+  </section>
 </div>
 
- 
- 
+<!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    <ul class="icons">
+      <li><a href="https://x.com/?lang=es" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="https://github.com/" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+      <li><a href="https://www.linkedin.com/home" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkdeIn</span></a></li>
+      <li><a href="/" class="icon solid fa-home"><span class="label">Home</span></a></li>
+    </ul>
+  </div>
+</footer>
 
-  <div class="contenedor">
-         <div class="tarjeta-derecha" >
-          <h2>Estudios</h2>
-          <p>Lorem ipsum dolor sit </p>
-         </div>
-         <div class="tarjeta-derecha" >
-          <h2>proyectos</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minus laborum, ullam 
-            labore maxime, magnam pariatur mollitia culpa eligendi tenetur saepe at possimus similique illo rem odit accusamus placeat accusantium?</p>
-         </div>
-         <div class="tarjeta-derecha" >
-          <h2>Aficiones</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minus laborum, ullam 
-            labore maxime, magnam pariatur mollitia culpa eligendi tenetur saepe at possimus similique illo rem odit accusamus placeat accusantium?</p>
-         </div>
-         </div>
-   
-<div class="imagen">
-  <img src="/assets/css/images/laura.jpg" alt="" id="foto">
-</div>
-  
-
-
-
-
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.poptrox.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
