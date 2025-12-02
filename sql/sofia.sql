@@ -18,7 +18,7 @@ INSERT INTO proyectos (nombreProyecto, descripcion, linkRepo, tecnologias, equip
 VALUES (
     'Página Web para Centro Comercial',
     'Desarrollo de una página web con HTML, CSS, JavaScript y Bootstrap.',
-    NULL,
+    'https://github.com/JotaMoncho/CentroComercial',
     'HTML, CSS, JavaScript, Bootstrap',
     4,
     2
@@ -48,7 +48,7 @@ INSERT INTO proyectos (nombreProyecto, descripcion, linkRepo, tecnologias, equip
 VALUES (
     'Elige Tu Propia Aventura',
     'Juego desarrollado en Java como una aventura conversacional con entrada y salida de texto, conexión a base de datos y realización de un CRUD.',
-    NULL,
+    'https://github.com/SofiaLacal/ETPA_vs2',
     'Java, SQL',
     4,
     5
